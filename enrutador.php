@@ -7,6 +7,8 @@ echo $accion;
 // ahora es
 include_once("controladores/controlador_".$controlador.".php");
 
-// $controlador= new controladorPaginas();
-$controlador->inicio();
+// upper case first para el nombre
+$nombreDeLaClase="controlador".ucfirst($controlador);
+$controlador= new $nombreDeLaClase();
+$controlador->$accion();
 ?>
