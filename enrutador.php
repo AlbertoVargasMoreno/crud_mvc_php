@@ -1,6 +1,4 @@
 <?php
-echo $controlador;
-echo $accion;
 // echo "in the router";
 // esto antes era
 // include_once("controladores/controlador_controlador.php");
