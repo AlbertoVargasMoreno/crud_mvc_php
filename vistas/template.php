@@ -11,7 +11,6 @@
 
   </head>
   <body>
-    on ta mi jumbotron?
       <div class="container">
           <div class="row">
               <div class="col-xs|sm|md|lg|xl-1-12">

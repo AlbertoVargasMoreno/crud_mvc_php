@@ -6,6 +6,10 @@ class controladorEmpleados{
 	}
 
 	public function crear(){
+		if ($_POST) {
+			print_r($_POST);
+		}
+
 		include_once("vistas/empleados/crear.php");
 	}
 
