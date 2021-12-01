@@ -1,4 +1,8 @@
 <?php
+
+include_once("conexion.php");
+BD::crearInstancia();
+
 class controladorEmpleados{
 	public function inicio(){
 		// echo "estoy en empleados/inicio";
