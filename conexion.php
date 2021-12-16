@@ -1,4 +1,6 @@
 <?php
+// what is pdo
+// https://www.javatpoint.com/php-pdo
 
 class BD {
 
