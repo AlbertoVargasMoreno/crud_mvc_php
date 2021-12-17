@@ -9,11 +9,18 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <th>1</th>
-            <th>Susana Zavaleta</th>
-            <th>uncorreo@email.com</th>
-            <th>Editar | Borrar</th>
-        </tr>
+        <?php foreach ($empleados as $empleado) { ?>
+            <tr>
+                <th> <?php echo $empleado->id; ?> </th>
+                <th> <?php echo $empleado->nombre; ?> </th>
+                <th> <?php echo $empleado->correo; ?> </th>
+                <th>
+                    <div>
+                        <a href="" class="btn"> Editar </a>
+                        <a href="" class="btn"> Borrar </a>
+                    </div>
+                </th>
+            </tr>
+        <?php } ?>
     </tbody>
 </table>

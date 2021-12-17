@@ -6,7 +6,7 @@ BD::crearInstancia();
 
 class controladorEmpleados{
 	public function inicio(){
-		print_r( Empleado::consultar() );
+		$empleados=Empleado::consultar();
 		include_once("vistas/empleados/inicio.php");
 	}
 
