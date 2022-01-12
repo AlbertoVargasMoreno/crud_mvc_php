@@ -17,10 +17,11 @@
                 <th>
                     <div>
                         <a href="" class="btn"> Editar </a>
-                        <a href="" class="btn"> Borrar </a>
+			<a href="?controlador=empleados&accion=borrar&id=<?php echo $empleado->id; ?>" class="btn"> Borrar </a>
                     </div>
                 </th>
             </tr>
         <?php } ?>
     </tbody>
+    <a href="?controlador=empleados&accion=crear" class="btn btn-success"> Agregar Empleado </a>
 </table>
