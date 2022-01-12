@@ -29,6 +29,13 @@ class Empleado {
 		$insertar=$conexionBD->prepare("INSERT INTO empleados(nombre, correo) VALUES(?,?)");
 		$insertar->execute(array($nombre,$correo));
 	}
+
+	public static function borrar($id) {
+		$conexionBD=BD::crearInstancia();
+
+		$borrar=$conexionBD->prepare("DELETE FROM empleados WHERE id=?");
+		$borrar->execute(array($id));
+	}
 }
 
 ?>
