@@ -16,7 +16,7 @@
                 <th> <?php echo $empleado->correo; ?> </th>
                 <th>
                     <div>
-                        <a href="" class="btn"> Editar </a>
+		        <a href="?controlador=empleados&accion=editar&id=<?php echo $empleado->id; ?>" class="btn"> Editar </a>
 			<a href="?controlador=empleados&accion=borrar&id=<?php echo $empleado->id; ?>" class="btn"> Borrar </a>
                     </div>
                 </th>

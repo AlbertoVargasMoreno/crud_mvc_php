@@ -1,4 +1,13 @@
 <?php
+/*
+echo "hola";
+var_dump("funciona?");
+var_dump(Empleado::consultar());
+$emp = new Empleado(1,'miguel','mig@mail.com');
+$respuesta = $emp->consultar();
+var_dump($respuesta);
+var_dump( $emp->editar(1));
+*/
 
 class Empleado {
 
@@ -35,6 +44,23 @@ class Empleado {
 
 		$borrar=$conexionBD->prepare("DELETE FROM empleados WHERE id=?");
 		$borrar->execute(array($id));
+	}
+
+	public static function editar($id) {
+		//var_dump( $id ); die();
+		$conexionBD=BD::crearInstancia();
+
+		$consultar=$conexionBD->prepare("SELECT * FROM empleados WHERE id=?");
+		$consultar->execute(array($id));
+		// var_dump($consultar->fetchAll());
+		// die();
+		$row = $consultar->fetchAll();
+		return $row;
+//		$resultado = $consultar->fetchAll();
+//		var_dump( $resultado );
+
+		//$insertar=$conexionBD->prepare("INSERT INTO empleados(nombre, correo) VALUES(?,?)");
+		//$insertar->execute(array($nombre,$correo));
 	}
 }
 

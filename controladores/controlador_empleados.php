@@ -24,6 +24,12 @@ class controladorEmpleados{
 
 	public function editar(){
 		include_once("vistas/empleados/editar.php");
+		if ($_GET) {
+			//var_dump( $_GET );
+			$id=$_GET['id'];
+			$respuesta=Empleado::editar($id);
+			var_dump( $respuesta );
+		}
 	}
 
 	public function borrar(){
