@@ -18,7 +18,6 @@ class controladorEmpleados{
 			Empleado::crear($nombreRecibido,$correoRecibido);
 			header("Location: ./?controlador=empleados&accion=inicio"); 
 		}
-
 		include_once("vistas/empleados/crear.php");
 	}
 
@@ -38,7 +37,6 @@ class controladorEmpleados{
 
 	public function borrar(){
 		if ($_GET) {
-//			var_dump($_GET);
 			$id=$_GET['id'];
 			Empleado::borrar($id);
 			header("Location: ./?controlador=empleados&accion=inicio"); 

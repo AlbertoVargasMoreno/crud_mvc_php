@@ -1,7 +1,4 @@
 <?php
-// what is pdo
-// https://www.javatpoint.com/php-pdo
-
 class BD {
 
 	private static $instancia=NULL;
@@ -11,7 +8,6 @@ class BD {
 			$opcionesPDO[PDO::ATTR_ERRMODE]= PDO::ERRMODE_EXCEPTION;
 
 			self::$instancia= new PDO('mysql:host=localhost;dbname=empleados','root','data', $opcionesPDO);
-			echo "conexion realizada, ahuevo";
 		}
 		return self::$instancia;
 	}
