@@ -23,12 +23,15 @@ class controladorEmpleados{
 	}
 
 	public function editar(){
-		include_once("vistas/empleados/editar.php");
 		if ($_GET) {
 			//var_dump( $_GET );
 			$id=$_GET['id'];
-			$respuesta=Empleado::editar($id);
-			var_dump( $respuesta );
+			$empleados_array=Empleado::consultar($id);
+			include_once("vistas/empleados/editar.php");
+		} elseif ($_POST) {
+			$nuevoNombre=$_POST['nombre'];
+			$nuevoCorreo=$_POST['correo'];
+			Empleado::editar($nuevoNombre,$nuevoCorreo,$id);
 		}
 	}
 
