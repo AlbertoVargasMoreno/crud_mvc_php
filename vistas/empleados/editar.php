@@ -1,9 +1,4 @@
 <?php 
-    var_dump(
-        $_REQUEST,
-        $_GET,
-        $_POST
-    );
     [$empleado]=$empleados_array;
 ?>
 <div class="card">
@@ -12,6 +7,12 @@
     </div>
     <div class="card-body">
         <form action="" method="post">
+            <div class="mb-3">
+                <label class="visually-hidden" for="inputName">Empleado Id</label>
+                <input type="hidden" class="form-control" name="id" 
+                    id="empleadoId" placeholder="" 
+                    value="<?php echo $empleado->id; ?>">
+            </div>
             <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre</label>
                 <input type="text" name="nombre" id="" 
